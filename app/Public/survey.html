@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder | Survey</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <legend>Friend Finder Survey!</legend>
+            <div class="form-group">
+                <label for="name">Name (Required)</label>
+                <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="photo">Link to Photo Image</label>
+                <input type="text" class="form-control" id="photo" placeholder="Photo">
+            </div>
+            <div class="form-group">
+                <label for="name">Are you a dog lover?</label>
+                <select class="form-control" id="q1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Do you like to try new foods?</label>
+                <select class="form-control" id="q2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Do you enjoy movie nights at home?</label>
+                <select class="form-control" id="q3">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">How often do you workout?</label>
+                <select class="form-control" id="q4">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Do you like to go to bars?</label>
+                <select class="form-control" id="q5">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">How often do you watch sports?</label>
+                <select class="form-control" id="q6">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">How often you cook often?</label>
+                <select class="form-control" id="q7">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">How hot is Texas weather?</label>
+                <select class="form-control" id="q8">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">On a scale of 1 to 5, how alarmed are you with the current state of the U.S.?</label>
+                <select class="form-control" id="q9">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">How strongly do you feel about running for president?</label>
+                <select class="form-control" id="q10">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-default submit survey-btn" data-toggle="modal"
+                data-target="#myModal">Submit</button>
+        </form>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Your Best Match!</h4>
+                    </div>
+
+                    <div class="modal-body" id="bestMatch">
+                        <h2 class="text-center" id="matchNameH"></h2>
+                        <img id="matchImg" class="img-responsive center-block" style="height:200px"
+                            alt="Responsive image">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container" id="footer-text">
+            <br>
+            <p class="text-muted"><a href="/">Home</a> | <a href="/api/friends" target="_blank">API Friends List</a> |
+                <a href="https://github.com/ricky-lai/Friendfinders" target="_blank">GitHub Repo</a></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!--*****************************************-->
+    <!-- BELOW CODE HANDLES HOW FORM DATA IS SENT TO & RETRIEVED FROM THE SERVER-->
+    <script type="text/javascript">
+        // VARIABLES
+        var scoreDiff = [];
+        var scoreComp = [];
+        var friend;
+        /**********************************************/
+        // FUNCTIONS
+        // Using jQuery to download data from the server in order to match scores
+        var runMatch = function () {
+            // Getting the location of the root page
+            var currentURL = window.location.origin;
+            // Clearing the array holding the potential friend match scores
+            scoreComp.length = 0;
+            // Using a GET command to get the requested data
+            $.get(currentURL + "/api/friends", function (friends) {
+                for (var i = 0; i < friends.length; i++) {
+                    console.log(friends[i].name);
+                }
+                // Calling the qDiff() function
+                qDiff(friends);
+            });
+        };
+        var qDiff = function (friends) {
+            // Storing the user's responses in a variable
+            var userAns = friends[friends.length - 1];
+            // Looping through each potential friend's answers
+            for (var i = 0; i < friends.length - 1; i++) {
+                friend = friends[i];
+                // Calculating the difference for each question between 1 friend & and the user's surveys
+                var matchScore = function (friend) {
+                    for (var i = 0; i < userAns.scores.length; i++) {
+                        scoreDiff[i] = Math.abs(parseInt(userAns.scores[i]) - parseInt(friend.scores[i]));
+                    }
+                    // Logging the differences by question
+                    console.log(friend.name + "'s Diffs: " + scoreDiff);
+                    // Calculating the total difference
+                    var sum = scoreDiff.reduce(add, 0);
+                    // Finding the sum of the differences (i.e., summing each scoreDiff array)
+                    function add(a, b) {
+                        return a + b;
+                    }
+                    // Logging the difference
+                    console.log(sum);
+                    // Storing the difference in an array
+                    scoreComp.push(sum);
+                };
+                // Calling the matchScore() function
+                matchScore(friend);
+            }
+            // Logging the array of total scores
+            console.log(scoreComp);
+            // Calculating the lowest score & logging the name of the match
+            var minScore = Math.min(...scoreComp);
+            var matchName = friends[scoreComp.indexOf(minScore)].name;
+            var matchPhoto = friends[scoreComp.indexOf(minScore)].photo;
+            // Logging the lowest score and name of the corresponding best match
+            console.log(minScore);
+            console.log(matchName);
+            // Adding the best match's name and photo to the modal
+            $("#matchNameH").text(matchName);
+            $("#matchImg").attr("src", matchPhoto);
+        };
+        /**********************************************/
+        // MAIN PROCESSES
+        // Creating the front-end JS that POSTS the form data to the express server
+        $(".submit").on("click", function (event) {
+            // Getting the location of the root page
+            var currentURL = window.location.origin;
+
+            event.preventDefault();
+            // Grabbing the form elements
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [$("#q1").val().trim(),
+                $("#q2").val().trim(),
+                $("#q3").val().trim(),
+                $("#q4").val().trim(),
+                $("#q5").val().trim(),
+                $("#q6").val().trim(),
+                $("#q7").val().trim(),
+                $("#q8").val().trim(),
+                $("#q9").val().trim(),
+                $("#q10").val().trim()
+                ]
+            };
+            // Logging the user's answers
+            console.log(newFriend);
+            // Creating the function for callback??
+            $.post(currentURL + "/api/friends", newFriend,
+                function (data) {
+                    // If the form is successfully submitted, find the best match
+                    if (data) {
+                        console.log("Form submitted.");
+                        // Calling the runMatch() function
+                        runMatch();
+                    }
+                    // If there is an error, let the user know
+                    else {
+                        alert("Something went wrong!");
+                    }
+                    // Clearing the form when submitting
+                    $("#name").val("");
+                    $("#photo").val("");
+                    $("#q1").val("");
+                    $("#q2").val("");
+                    $("#q3").val("");
+                    $("#q4").val("");
+                    $("#q5").val("");
+                    $("#q6").val("");
+                    $("#q7").val("");
+                    $("#q8").val("");
+                    $("#q9").val("");
+                    $("#q10").val("");
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>

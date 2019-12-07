@@ -1,0 +1,13 @@
+body {
+	background-color: #868687 !important;
+}
+
+.main-jumbo {
+	background-image: URL("../images/friend.png");
+	background-size: cover;
+
+}
+
+.survey-btn {
+	background-color: #cccdd8;
+}
