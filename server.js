@@ -22,7 +22,7 @@ app.use(express.static(process.cwd() + "/app/public"));
 /**********************************************/
 // Pointing the server to the "route" files
 require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+require("./app/Routing/htmlRoutes.js")(app);
 
 
 /**********************************************/
